@@ -1,16 +1,16 @@
-In.add('fdchart-css',{path:'/statics/plugins/fdchart/images/fdchart.css',type:'css',charset:'utf-8'});
-In.add('kinetic',{path:'/statics/plugins/fdchart/src/kinetic-v3.9.8.js',type:'js',charset:'utf-8',rely:['fdchart-css']});
-In.add('chart-line',{path:'/statics/plugins/fdchart/line.js',type:'js',charset:'utf-8'});
-In.add('chart-bar',{path:'/statics/plugins/fdchart/bar.js',type:'js',charset:'utf-8'});
-In.add('chart-pie',{path:'/statics/plugins/fdchart/pie.js',type:'js',charset:'utf-8'});
-In.add('chart-mesh',{path:'/statics/plugins/fdchart/mesh.js',type:'js',charset:'utf-8'});
-In.add('chart-area',{path:'/statics/plugins/fdchart/area.js',type:'js',charset:'utf-8'});
+In.add('fdchart-css',{path:'./public/images/fdchart.css',type:'css',charset:'utf-8'});
+In.add('kinetic',{path:'./public/src/kinetic-v3.9.8.js',type:'js',charset:'utf-8',rely:['fdchart-css']});
+In.add('chart-line',{path:'./public/line.js',type:'js',charset:'utf-8'});
+In.add('chart-bar',{path:'./public/bar.js',type:'js',charset:'utf-8'});
+In.add('chart-pie',{path:'./public/pie.js',type:'js',charset:'utf-8'});
+In.add('chart-mesh',{path:'./public/mesh.js',type:'js',charset:'utf-8'});
+In.add('chart-area',{path:'./public/area.js',type:'js',charset:'utf-8'});
 
 var fdChartObj = {};
 var global = $(window);
  
 $.fn.showFdChart = function(options) {
-	
+
   if(!Modernizr.canvas) return false;
 	
    var settings = $.extend({
@@ -34,7 +34,7 @@ $.fn.showFdChart = function(options) {
   var container = settings.container;
   
   container.addClass('chart-'+settings.type).css('background',settings.bgColor);
-  
+
   var index = $('.fd-chart').index(this);
   var datas;
     
